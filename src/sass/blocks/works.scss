@@ -1,0 +1,85 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.works {
+    padding-top: 60px;
+
+    &__slider {
+        margin-top: 40px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        padding-bottom: 43.4px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 6px;
+    }
+
+    .swiper-pagination {
+        bottom: 0;
+
+        &-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: $dark;
+            border-radius: 0%;
+            opacity: 1;
+            -webkit-tap-highlight-color: transparent;
+
+            &-active {
+                background-color: $ceramic;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .works {
+        &__slider {
+            margin-top: 45px;
+        }
+
+        .swiper-slide img {
+            width: 400px;
+            margin: 0 auto;
+            padding-bottom: 43.4px;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .works {
+        &__slider {
+            margin: 80px 40px 0 40px;
+        }
+
+        .swiper-slide img {
+            padding-bottom: 58.4px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: block;
+            color: $dark;
+            position: relative;
+            width: 8.09px;
+            height: 21.32px;
+        }
+
+        .swiper-button-prev {
+            top: -182.88px;
+            left: 16px;
+        }
+
+        .swiper-button-next {
+            top: -204.2px;
+            left: 1118.64px;
+        }
+    }
+}

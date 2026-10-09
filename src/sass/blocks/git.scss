@@ -1,0 +1,193 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.git {
+    padding-top: 60px;
+
+    &__wrapper {
+        padding-top: 59px;
+    }
+
+    &__img,
+    &__icon {
+        display: none;
+    }
+
+    &__fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__label {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        color: $dark;
+
+        &:nth-child(2) {
+            margin-top: 8px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid #e2e1e5;
+        border-radius: 2px;
+        padding: 10px 15px;
+        height: 48px;
+        color: $dark;
+        background: #fff;
+
+        &:hover,
+        &:focus {
+            border: none;
+            outline: 1px solid $dark;
+        }
+
+        &:invalid {
+            border-color: $ui-error;
+        }
+
+        &::placeholder {
+            color: $ui-disabled;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 200%;
+        }
+    }
+
+    &__textarea {
+        border: 1px solid #e2e1e5;
+        border-radius: 2px;
+        padding: 10px 15px;
+        width: 100%;
+        height: 132px;
+        background: #fff;
+        resize: none;
+
+        &:hover,
+        &:focus {
+            border: none;
+            outline: 1px solid $dark;
+        }
+
+        &:invalid {
+            border-color: $ui-error;
+        }
+
+        &::placeholder {
+            color: $ui-disabled;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 200%;
+        }
+    }
+
+    &__check-block {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        a {
+            color: #a22dc6;
+            text-decoration: none;
+            margin-left: 3px;
+        }
+    }
+
+    &__checkbox {
+        margin-right: 15px;
+        accent-color: $dark;
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .git {
+        &__wrapper {
+            padding-top: 45px;
+        }
+
+        &__form {
+            padding-left: 24px;
+            position: relative;
+            width: 300px;
+        }
+
+        &__icon {
+            position: absolute;
+            display: block;
+            left: 635px;
+            bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .git {
+        &__wrapper {
+            padding-top: 80px;
+        }
+
+        &__form {
+            padding-left: 40px;
+        }
+
+        &__img {
+            display: block;
+            width: 550px;
+            height: 341px;
+            object-fit: cover;
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        &__icon {
+            left: 288px;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .git {
+        &__icon {
+            left: 497px;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .git {
+        &__form {
+            padding-left: 147px;
+            width: 645px;
+        }
+
+        &__fieldset {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 45px;
+        }
+
+        &__input,
+        &__textarea {
+            width: 300px;
+        }
+
+        &__icon {
+            left: 707px;
+        }
+
+        &__img {
+            width: 100%;
+            height: 356px;
+        }
+
+        &__icon {
+            right: 315px;
+        }
+    }
+}
