@@ -114,14 +114,13 @@
 
         &__form {
             padding-left: 24px;
-            position: relative;
             width: 300px;
         }
 
         &__icon {
             position: absolute;
             display: block;
-            left: 635px;
+            right: 0;
             bottom: 0;
         }
     }
@@ -134,7 +133,8 @@
         }
 
         &__form {
-            padding-left: 40px;
+            margin-left: 20px;
+            padding: 0;
         }
 
         &__img {
@@ -144,25 +144,13 @@
             object-fit: cover;
             box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
         }
-
-        &__icon {
-            left: 288px;
-        }
-    }
-}
-
-@media screen and (min-width:1200px) {
-    .git {
-        &__icon {
-            left: 497px;
-        }
     }
 }
 
 @media screen and (min-width:1920px) {
     .git {
         &__form {
-            padding-left: 147px;
+            margin-left: 147px;
             width: 645px;
         }
 
@@ -177,17 +165,13 @@
             width: 300px;
         }
 
-        &__icon {
-            left: 707px;
-        }
-
         &__img {
             width: 100%;
             height: 356px;
         }
 
         &__icon {
-            right: 315px;
+            right: 85px;
         }
     }
 }
