@@ -45,7 +45,7 @@
             outline: 1px solid $dark;
         }
 
-        &:invalid {
+        &:user-invalid {
             border-color: $ui-error;
         }
 
@@ -72,7 +72,7 @@
             outline: 1px solid $dark;
         }
 
-        &:invalid {
+        &:user-invalid {
             border-color: $ui-error;
         }
 
