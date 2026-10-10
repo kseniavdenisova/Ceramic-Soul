@@ -39,6 +39,8 @@
 
 @media screen and (min-width:768px) {
     .works {
+        padding-top: 55px;
+
         &__slider {
             margin-top: 45px;
         }
@@ -52,6 +54,8 @@
 
 @media screen and (min-width:1200px) {
     .works {
+        padding-top: 60px;
+
         &__wrapper {
             position: relative;
         }
@@ -60,11 +64,50 @@
             margin: 80px 40px 0 40px;
         }
 
+        .swiper-slide img {
+            width: 100%;
+        }
+
         .works__slider-nav {
             position: absolute;
             top: 50%;
             display: block;
             font-size: 21px;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            transform: translateY(-50%);
+
+            &::before {
+                width: auto;
+                margin: 0;
+            }
+        }
+
+        .icon-left-open {
+            left: 13px;
+        }
+
+        .icon-right-open {
+            right: 13px;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .works {
+        padding-top: 100px;
+
+        &__slider {
+            margin: 80px 85px 0 85px;
+        }
+
+        .icon-left-open {
+            left: 35px;
+        }
+
+        .icon-right-open {
+            right: 35px;
         }
     }
 }

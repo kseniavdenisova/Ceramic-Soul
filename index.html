@@ -18,7 +18,7 @@
     <section class="promo">
         <img src="/src/img/promo/potter-process1.jpg" alt="potter" class="promo__potter">
         <div class="container">
-            <div class="header">
+            <header class="header">
                 <div class="header__top">
                     <div class="burger">
                         <span></span><span></span><span></span>
@@ -36,7 +36,7 @@
                         <li><a href="#" class="header__link">about</a></li>
                     </ul>
                 </nav>
-            </div>
+            </header>
             <div class="promo__wrapper">
                 <h1 class="title-h1-italic promo__title">Make your dream come true<br> or decorate your home</h1>
                 <div class="promo__cta">
@@ -131,13 +131,27 @@
                     </div>
                 </div>
                 <!-- If we need navigation buttons -->
-                <span class="icon-left-open works__slider-nav"></span>
-                <span class="icon-right-open works__slider-nav"></span>
+                <button class="icon-left-open works__slider-nav"></button>
+                <button class="icon-right-open works__slider-nav"></button>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__newsletter">
+                <form action="#">
+                    <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+                    <label for="checkbox" class="git__label git__check-block"><input type="checkbox" id="checkbox"
+                            required class="git__checkbox">I agree with the <a href="#">terms</a></label>
+                    <button class="btn-send">submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
     <script type="module" src="/src/js/main.js"></script>
 </body>
 
