@@ -7,12 +7,16 @@
 @use "/src/sass/base/basic.scss";
 
 @use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/footer.scss";
 
 @use "/src/sass/ui/title.scss";
 @use "/src/sass/ui/buttons.scss";
 
+// homepage 
 @use "/src/sass/blocks/promo.scss";
 @use "/src/sass/blocks/activities.scss";
 @use "/src/sass/blocks/git.scss";
 @use "/src/sass/blocks/works.scss";
-@use "/src/sass/blocks/footer.scss";
+
+// catalog
+@use "/src/sass/blocks/catalog.scss";

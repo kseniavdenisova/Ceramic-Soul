@@ -45,6 +45,7 @@
         height: 100vh;
         background-color: $light;
         transition: transform 0.4s;
+        z-index: 11;
 
         &_active {
             transform: translateX(100%);
