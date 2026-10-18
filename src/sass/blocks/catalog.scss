@@ -99,7 +99,7 @@
             }
 
             &-item {
-                padding: 10px;
+                padding: 10px 10px 0 10px;
 
                 &-wrapper {
                     display: flex;
@@ -116,7 +116,7 @@
     .catalog {
         &__content {
             &-item {
-                padding: 25px;
+                padding: 25px 25px 0 25px;
 
                 &-wrapper {
                     gap: 35px;
