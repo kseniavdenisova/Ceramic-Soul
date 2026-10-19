@@ -103,10 +103,13 @@
                     <h3 class="title-h4">newsletter</h3>
                     <p class="footer__sub-title">Keep up to date with news and promotions</p>
                     <form action="#">
-                        <input type="email" id="email" name="email" aria-label="Enter your e-mail"
+                        <input type="email" id="footer__email" name="email" aria-label="Enter your e-mail"
                             placeholder="Enter your e-mail" required class="footer__input">
-                        <label for="checkbox" class="footer__check-block"><input type="checkbox" id="checkbox" required
-                                class="footer__checkbox">I agree with the <a href="#">terms</a></label>
+                        <div class="error-message"></div>
+                        <label for="footer__checkbox" class="footer__check-block"><input type="checkbox"
+                                id="footer__checkbox" required class="footer__checkbox">I agree with the <a
+                                href="#">terms</a></label>
+                        <div class="checkbox-error-message"></div>
                         <button class="btn-submit footer__btn">submit</button>
                     </form>
                 </div>

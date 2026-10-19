@@ -104,25 +104,42 @@
                     <form action="#">
                         <fieldset class="git__fieldset">
                             <div class="git__input-block">
-                                <label for="name" class="git__label">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Name" required class="git__input">
+                                <label for="git__name" class="git__label">Name</label>
+                                <input type="text" id="git__name" name="name" placeholder="Name" required minlength="2"
+                                    class="git__input">
                             </div>
                             <div class="git__input-block">
-                                <label for="email" class="git__label">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Email" required
+                                <label for="git__email" class="git__label">Email</label>
+                                <input type="email" id="git__email" name="email" placeholder="Email" required
                                     class="git__input">
                             </div>
                         </fieldset>
-                        <label for="question" class="git__label">Your question</label>
-                        <textarea name="question" id="question" placeholder="Question" required
+                        <label for="git__question" class="git__label">Your question</label>
+                        <textarea name="question" id="git__question" placeholder="Question" required minlength="5"
                             class="git__textarea"></textarea>
-                        <label for="checkbox" class="git__label git__check-block"><input type="checkbox" id="checkbox"
-                                required class="git__checkbox">I agree with the <a href="#">terms</a></label>
+                        <div class="error-message"></div>
+                        <label for="git__checkbox" class="git__label git__check-block"><input type="checkbox"
+                                id="git__checkbox" required class="git__checkbox">I agree with the <a
+                                href="#">terms</a></label>
+                        <div class="checkbox-error-message"></div>
                         <button class="btn-send git__btn">send request</button>
                     </form>
 
                     <img src="/src/img/contacts/vase.svg" alt="vase" class="git__icon">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="findus">
+        <div class="container">
+            <h2 class="title-h2">find us</h2>
+
+            <div class="findus__wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9574.19799761421!2d-73.95788220600508!3d40.73054201045239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2593c58f8777d%3A0xe2215ac687bd7249!2sCLAY%20SPACE%20Ceramic%20Center!5e1!3m2!1sru!2sua!4v1792421934399!5m2!1sru!2sua"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
         </div>
     </section>
@@ -134,10 +151,13 @@
                     <h3 class="title-h4">newsletter</h3>
                     <p class="footer__sub-title">Keep up to date with news and promotions</p>
                     <form action="#">
-                        <input type="email" id="email" name="email" aria-label="Enter your e-mail"
+                        <input type="email" id="footer__email" name="email" aria-label="Enter your e-mail"
                             placeholder="Enter your e-mail" required class="footer__input">
-                        <label for="checkbox" class="footer__check-block"><input type="checkbox" id="checkbox" required
-                                class="footer__checkbox">I agree with the <a href="#">terms</a></label>
+                        <div class="error-message"></div>
+                        <label for="footer__checkbox" class="footer__check-block"><input type="checkbox"
+                                id="footer__checkbox" required class="footer__checkbox">I agree with the <a
+                                href="#">terms</a></label>
+                        <div class="checkbox-error-message"></div>
                         <button class="btn-submit footer__btn">submit</button>
                     </form>
                 </div>

@@ -14,6 +14,7 @@
     "vite": "^8.2.2"
   },
   "dependencies": {
+    "just-validate": "^4.3.0",
     "postcss-pxtorem": "^6.1.0",
     "purecss": "^3.0.0",
     "swiper": "^14.3.0"

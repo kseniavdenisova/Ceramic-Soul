@@ -3,6 +3,9 @@ import 'purecss/build/grids-responsive-min.css';
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+
+import JustValidate from 'just-validate';
+
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -76,3 +79,74 @@ try {
 } catch (e) { }
 
 // Обратите внимание, что значение block (в двух местах) можно спокойно поменять на flex, если вам это необходимо
+
+try {
+    const gitValidator = new JustValidate('.git form', { submitFormAutomatically: true });
+
+    gitValidator
+        .addField('#git__name', [
+            {
+                rule: 'required',
+                errorMessage: 'Please, enter your name',
+            },
+            {
+                rule: 'minLength',
+                value: 2,
+                errorMessage: 'Min 2 char!',
+            },
+        ])
+        .addField('#git__email', [
+            {
+                rule: 'required',
+                errorMessage: 'Please, enter your email',
+            },
+            {
+                rule: 'email',
+                errorMessage: 'Enter a valid email (example@gmail.com)',
+            },
+        ])
+        .addField('#git__question', [
+            {
+                rule: 'required',
+                errorMessage: 'Please, enter your question',
+            },
+            {
+                rule: 'minLength',
+                value: 5,
+                errorMessage: 'Min char 5!',
+            },
+        ], {
+            errorsContainer: document.querySelector('#git__question').parentElement.querySelector('.error-message'),
+        })
+        .addField('#git__checkbox', [
+            {
+                rule: 'required',
+                errorMessage: 'Please, check the box',
+            },
+        ], {
+            errorsContainer: document.querySelector('#git__question').parentElement.parentElement.querySelector('.checkbox-error-message'),
+        })
+
+    const footerValidator = new JustValidate('.footer form', { submitFormAutomatically: true });
+
+    footerValidator
+        .addField('#footer__email', [
+            {
+                rule: 'required',
+                errorMessage: 'Enter a valid email (example@gmail.com)',
+            },
+            {
+                rule: 'email',
+            },
+        ], {
+            errorsContainer: document.querySelector('#footer__email').parentElement.querySelector('.error-message'),
+        })
+        .addField('#footer__checkbox', [
+            {
+                rule: 'required',
+                errorMessage: 'Please, check the box',
+            },
+        ], {
+            errorsContainer: document.querySelector('#footer__checkbox').parentElement.parentElement.querySelector('.checkbox-error-message'),
+        });
+} catch (e) { }
