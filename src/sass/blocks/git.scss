@@ -8,7 +8,7 @@
     }
 
     &__img,
-    &__icon {
+    &__icon-wrapper {
         display: none;
     }
 
@@ -55,6 +55,15 @@
             font-size: 14px;
             line-height: 200%;
         }
+    }
+
+    &__input:-webkit-autofill,
+    &__input:-webkit-autofill:hover,
+    &__input:-webkit-autofill:focus,
+    &__input:-webkit-autofill:active,
+    &__input:autofill {
+        -webkit-text-fill-color: $dark;
+        transition: background-color 5000s ease-in-out 0s;
     }
 
     &__textarea {
@@ -118,10 +127,17 @@
         }
 
         &__icon {
-            position: absolute;
-            display: block;
-            right: 0;
-            bottom: 0;
+
+
+            animation: slideIn 0.9s infinite;
+
+            &-wrapper {
+                position: absolute;
+                display: block;
+                right: 0;
+                bottom: 0;
+                animation: moveUpDown 5s infinite;
+            }
         }
     }
 }

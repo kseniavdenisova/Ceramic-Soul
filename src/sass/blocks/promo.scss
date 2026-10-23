@@ -57,6 +57,8 @@
 
 @media screen and (min-width:1200px) {
     .promo {
+        overflow-x: clip;
+
         &__potter {
             display: block;
             width: clamp(450px, 37.5vw, 640px);
@@ -69,6 +71,12 @@
 
         &__title {
             padding-left: 571px;
+        }
+
+        &__cta {
+            // animation-name: slideInRight;
+            // animation-duration: 3s;
+            animation: slideInRight 3s;
         }
     }
 }

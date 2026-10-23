@@ -41,12 +41,20 @@
 
         &:user-invalid {
             border-color: $ui-error;
-            color: $ui-error;
 
             &::placeholder {
                 color: $ui-error;
             }
         }
+    }
+
+    &__input:-webkit-autofill,
+    &__input:-webkit-autofill:hover,
+    &__input:-webkit-autofill:focus,
+    &__input:-webkit-autofill:active,
+    &__input:autofill {
+        -webkit-text-fill-color: $ui-active;
+        transition: background-color 5000s ease-in-out 0s;
     }
 
     &__check-block {

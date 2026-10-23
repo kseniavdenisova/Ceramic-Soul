@@ -10,6 +10,7 @@ import JustValidate from 'just-validate';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'animate.css';
 
 import '/src/sass/style.scss';
 
@@ -81,7 +82,7 @@ try {
 // Обратите внимание, что значение block (в двух местах) можно спокойно поменять на flex, если вам это необходимо
 
 try {
-    const gitValidator = new JustValidate('.git form', { submitFormAutomatically: true });
+    const gitValidator = new JustValidate('.git form');
 
     gitValidator
         .addField('#git__name', [
@@ -126,8 +127,22 @@ try {
         ], {
             errorsContainer: document.querySelector('#git__question').parentElement.parentElement.querySelector('.checkbox-error-message'),
         })
+        .onSuccess((event) => {
+            const form = event.currentTarget;
+            const formData = new FormData(form);
 
-    const footerValidator = new JustValidate('.footer form', { submitFormAutomatically: true });
+            fetch("https://httpbin.org/post", {
+                method: "POST",
+                body: formData,
+            }).then(res => res.json()).then(data => {
+                console.log('Success', data);
+                form.reset();
+            });
+        });
+} catch (e) { }
+
+try {
+    const footerValidator = new JustValidate('.footer form');
 
     footerValidator
         .addField('#footer__email', [
@@ -148,5 +163,17 @@ try {
             },
         ], {
             errorsContainer: document.querySelector('#footer__checkbox').parentElement.parentElement.querySelector('.checkbox-error-message'),
+        })
+        .onSuccess((event) => {
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+
+            fetch("https://httpbin.org/post", {
+                method: "POST",
+                body: formData,
+            }).then(res => res.json()).then(data => {
+                console.log('Success', data);
+                form.reset();
+            });
         });
 } catch (e) { }
