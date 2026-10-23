@@ -6,7 +6,6 @@ import viteImagemin from 'vite-plugin-imagemin';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-    base: '/Ceramic-Soul/',
     build: {
         rollupOptions: {
             input: {
